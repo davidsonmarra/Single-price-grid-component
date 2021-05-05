@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
+
+:root {
+  --cinza-claro: hsl(204, 43%, 93%);
+  --ciano: hsl(179, 62%, 43%);
+  --ciano2: hsla(179, 62%, 43%, 0.699);
+  --verde: hsl(71, 73%, 54%);
+  --cinza: hsl(218, 22%, 67%);
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--cinza-claro);
+    padding: 5em 5em;
+}
+
+h4, p { padding: 1em 0; }
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: .1em .1em .9em .2em #7070706c;
+    border-radius: 0.75em;
+}
+
+.primeiro {
+    background-color: #FEFEFE;
+    padding: 0 0 0.5em 0.75em; 
+    border-radius: 0.75em 0.75em 0 0;
+}
+
+.titulo-1 {
+    font-size: 1.5em;
+    color: var(--ciano);
+    padding-top: 1em;
+}
+
+.introducao { color: var(--verde); }
+
+.primeiro  { color: var(--cinza); }
+
+.segundo {
+    background-color: var(--ciano);
+    padding: 0 0.75em 0.75em 0.75em; 
+    border-radius: 0em 0em 0em 0.75em;
+}
+
+.segundo h4 {
+    color: #FEFEFE;
+    font-weight: 600;
+}
+
+.preco {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FEFEFE;
+}
+
+.tempo {
+    font-size: 0.9em;
+    color: #ccccccb6;
+}
+
+.segundo p {
+    color: var(--cinza-claro);
+}
+
+.botao {
+    display: block;
+    text-align: center;
+    color: #FEFEFE;
+    text-decoration: none;
+    width: 100%;
+    padding: 1em 0;
+    border-radius: 8px;
+    background-color: var(--verde);
+    box-shadow: .1em .1em .9em .2em #7070706c;
+}
+
+.botao:hover {
+    background-color: #FEFEFE;
+    color: var(--ciano2);
+    transform: scale(1.05);
+    transition: 1s all;
+}
+
+.terceiro {
+    background-color: var(--ciano2);
+    padding: 0 0.75em 0.75em 0.75em; 
+    border-radius: 0em 0em 0.75em 0em;
+}
+
+.terceiro h4 {
+    color: #FEFEFE;
+    margin-bottom: 0.5em;
+}
+
+.terceiro p {
+    font-size: 0.9em;
+    line-height: 0; /** Diminui os espaços entre as linhas*/
+    color: rgba(255, 255, 255, 0.65);
+}
