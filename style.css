@@ -1,62 +1,93 @@
 @import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
-
 :root {
-  --cinza-claro: hsl(204, 43%, 93%);
-  --ciano: hsl(179, 62%, 43%);
-  --ciano2: hsla(179, 62%, 43%, 0.699);
-  --verde: hsl(71, 73%, 54%);
-  --cinza: hsl(218, 22%, 67%);
+    --cinza-claro: hsl(204, 43%, 93%);
+    --ciano: hsl(179, 62%, 43%);
+    --ciano2: hsla(179, 62%, 43%, 0.699);
+    --verde: hsl(71, 73%, 54%);
+    --cinza: hsl(218, 22%, 67%);
 }
 
 body {
     font-family: 'Karla', sans-serif;
     background-color: var(--cinza-claro);
-    padding: 5em 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-h4, p { padding: 1em 0; }
-
 .container {
-    width: 100%;
-    margin: 0 auto;
-    box-shadow: .1em .1em .9em .2em #7070706c;
-    border-radius: 0.75em;
+    width: 680px;
 }
 
 .primeiro {
     background-color: #FEFEFE;
-    padding: 0 0 0.5em 0.75em; 
+    padding: 2.5em;
+    color: var(--cinza);
     border-radius: 0.75em 0.75em 0 0;
 }
 
-.titulo-1 {
+.primeiro h3 {
     font-size: 1.5em;
     color: var(--ciano);
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.primeiro h4 {
+    color: var(--verde);
+    font-weight: 600;
+    padding: 0.8em 0;
+}
+
+.primeiro p {
     padding-top: 1em;
 }
 
-.introducao { color: var(--verde); }
+.bloco {
+    display: flex;
+    flex-direction: row;
+    /*divide as seções em linhas*/
+    flex-wrap: wrap;
+    /*pode quebrar -> divide as seções em colunas*/
+}
 
-.primeiro  { color: var(--cinza); }
+/*
+1=> permite expandir, 
+1=> permite diminuir, 
+200px => vai ter q ter no minimo 200px, se nao conseguir vai quebrar
+*/
+
+.bloco section {
+    flex: 1 1 200px;
+}
+
+/*===segunda seção===*/
 
 .segundo {
     background-color: var(--ciano);
-    padding: 0 0.75em 0.75em 0.75em; 
-    border-radius: 0em 0em 0em 0.75em;
+    padding: 2.5em;
+    border-radius: 0 0 0 0.75em;
 }
 
 .segundo h4 {
     color: #FEFEFE;
     font-weight: 600;
+    padding: 0.8em 0;
 }
 
-.preco {
+.segundo p {
+    color: #FEFEFE;
+    margin-top: 2em;
+}
+
+.segundo .preco {
     font-size: 1.5em;
     font-weight: bold;
     color: #FEFEFE;
 }
 
-.tempo {
+.segundo .tempo {
     font-size: 0.9em;
     color: #ccccccb6;
 }
@@ -65,38 +96,58 @@ h4, p { padding: 1em 0; }
     color: var(--cinza-claro);
 }
 
-.botao {
+.segundo .botao {
     display: block;
     text-align: center;
     color: #FEFEFE;
     text-decoration: none;
+    font-weight: bold;
     width: 100%;
     padding: 1em 0;
+    margin-top: 1em;
     border-radius: 8px;
     background-color: var(--verde);
     box-shadow: .1em .1em .9em .2em #7070706c;
-}
-
-.botao:hover {
-    background-color: #FEFEFE;
-    color: var(--ciano2);
-    transform: scale(1.05);
     transition: 1s all;
 }
 
+.segundo .botao:hover {
+    background-color: #FEFEFE;
+    color: var(--ciano2);
+    transform: scale(1.05);
+    font-weight: bold;
+}
+
+/*===terceira seção===*/
+
 .terceiro {
     background-color: var(--ciano2);
-    padding: 0 0.75em 0.75em 0.75em; 
-    border-radius: 0em 0em 0.75em 0em;
+    padding: 2.5em;
+    width: 100%;
+    border-radius: 0 0 0.75em 0;
 }
 
 .terceiro h4 {
     color: #FEFEFE;
+    font-weight: 600;
     margin-bottom: 0.5em;
+    padding: 0.8em 0;
 }
 
-.terceiro p {
+.terceiro ul li {
     font-size: 0.9em;
-    line-height: 0; /** Diminui os espaços entre as linhas*/
+    line-height: 1.5;
+    /* Diminui os espaços entre as linhas*/
     color: rgba(255, 255, 255, 0.65);
+}
+
+/* reponsividade celular */
+
+@media screen and (max-width: 560px) {
+    .segundo {
+        border-radius: 0;
+    }
+    .terceiro {
+        border-radius: 0;
+    }
 }
